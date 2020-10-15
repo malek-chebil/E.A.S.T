@@ -1,5 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import Market from "./components/market.jsx"
+import Navbar from "./components/navbar.jsx"
 class App extends React.Component {
     constructor(props){
         super(props)
@@ -8,9 +10,11 @@ class App extends React.Component {
         }
     }
     render() {
-      return <h1>Bonjour</h1>;
+      return <div>
+        <Navbar/>
+        <Market/>
+      </div>
     }
   }
 
-ReactDOM.render( <App/>,document.getElementById('app')
-);
+ReactDOM.render(<App/>,document.getElementById('app'))
