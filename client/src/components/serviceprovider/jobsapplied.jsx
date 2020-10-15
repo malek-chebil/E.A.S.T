@@ -4,7 +4,9 @@ class Jobsapplied extends React.Component {
     }
 
     render() {
-      return <h1>Bonjour</h1>;
+      return <div>
+        
+      </div>;
     }
   }
 
