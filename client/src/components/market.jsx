@@ -160,9 +160,7 @@ class Market extends React.Component {
     </div>
 
     {/* <!-- Aside Bar --> */}
-    <aside id="ashade-aside">
-     <Asidebar/>
-    </aside>
+   
       
       </div>;
     }
