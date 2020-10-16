@@ -12,10 +12,11 @@ class Bio extends React.Component {
             <div className="ashade-col col-6">
               <h2>
                 <span>Few Words About Myself</span>
-                Nice to Meet You{this.props.username}
+                Put UserName here{this.props.username}
               </h2>
               <span>
                 {" "}
+                Put Biography here... .
                 Through the lens the world looks different and i would like to
                 show you this difference. I learned that from age 10, when I was
                 first time take photos on manual camera with my Dad. After that
