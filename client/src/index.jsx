@@ -5,6 +5,21 @@ import Navbar from "./components/navbar.jsx"
 import Asidebar from "./components/asidebar.jsx"
 import Home from "./components/home.jsx"
 import Footer from "./components/footer.jsx"
+import JobsPosted from "./components/client/jobsposted.jsx"
+import Jobsapplied from "./components/serviceprovider/Jobsapplied.jsx"
+import PostJob from "./components/client/postjob.jsx"
+import Signup from "./components/Signup.jsx"
+import Login from "./components/login.jsx"
+import About from "./components/about.jsx"
+import ProfileSP from "./components/serviceprovider/serviceProviderprofil/serviceproviderprofil.jsx"
+import ClientProfile from "./components/client/clientprofile/clientprofil.jsx"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 class App extends React.Component {
     constructor(props){
         super(props)
@@ -14,13 +29,23 @@ class App extends React.Component {
     }
     render() {
       return <div>
-         <Navbar/>
-         <aside id="ashade-aside">
-        <Asidebar/>
-        </aside>
-        
-        {/* <Home/> */}
-        <Market/> 
+      <Router>
+        <Navbar/>
+        <aside id="ashade-aside">
+         <Asidebar/>
+         </aside> 
+         
+         <Route exact path="/"  component={Home}/>
+         <Route path="/About"  component={About}/>
+         <Route path="/Login" component={Login}/>
+         <Route path="/Signup" component={Signup}/>
+         <Route path="/AccountS" component={ProfileSP}/>
+         <Route path="/AccountC" component={ClientProfile}/>
+         <Route path="/JobsPosted" component={JobsPosted}/>
+         <Route path="/Jobsapplied" component={Jobsapplied}/>
+         <Route path="/PostJob" component={PostJob}/>
+         <Route path="/JobMarket" component={Market}/>
+      </Router>
       </div>
     }
   }
