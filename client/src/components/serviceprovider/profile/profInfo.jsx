@@ -5,42 +5,56 @@ class ProfileInfo extends React.Component {
   }
   render() {
     return (
-      <section className="ashade-section">
-        <div className="ashade-row ashade-keep-on-tablet">
-          <div className="ashade-col col-3">
-            <div className="ashade-counter-item" data-delay="3000">
-              <span className="ashade-counter-label">Skills (%)</span>
-    <span className="ashade-counter-value">25{this.props.stats}</span>
-              
-            </div>
-          </div>
-          {/* <!-- .ashade-col --> */}
-          <div className="ashade-col col-3">
-            <div className="ashade-counter-item" data-delay="3000">
-              <span className="ashade-counter-label">Skills (%)</span>
-              <span className="ashade-counter-value">67{this.props.stats}</span>
-              
-            </div>
-          </div>
-          {/* <!-- .ashade-col --> */}
-          <div className="ashade-col col-3">
-            <div className="ashade-counter-item" data-delay="3000">
-              <span className="ashade-counter-label">Skills (%)</span>
-              <span className="ashade-counter-value">211{this.props.stats}</span>
-              
-            </div>
-          </div>
-          {/* <!-- .ashade-col --> */}
-          <div className="ashade-col col-3">
-            <div className="ashade-counter-item" data-delay="2000">
-              <span className="ashade-counter-label">Skills (%)</span>
-    <span className="ashade-counter-value">5896{this.props.stats}</span>
+      <section class="ashade-section">
+      <div class="ashade-row">
+        <div class="ashade-col col-12 align-center">
+          <h3>
+            <span>According to Successfully Projects</span>
+            My Skills Level
+          </h3>
+          <div class="ashade-row ashade-keep-on-tablet">
+            <div class="ashade-col col-3">
+              <div
+                class="ashade-progress-item"
+                data-delay="3000"
+                data-percent="92"
+              >
+                <span class="ashade-progress-label">Personal Sessions{this.props.skill1}</span>
               </div>
+            </div>
+            <div class="ashade-col col-3">
+              <div
+                class="ashade-progress-item"
+                data-delay="3000"
+                data-percent="78"
+              >
+                <span class="ashade-progress-label">Love Stories{this.props.skill2}</span>
+              </div>
+            </div>
+            <div class="ashade-col col-3">
+              <div
+                class="ashade-progress-item"
+                data-delay="3000"
+                data-percent="65"
+              >
+                <span class="ashade-progress-label">Weddings and Events{this.props.skill3}</span>
+              </div>
+            </div>
+            <div class="ashade-col col-3">
+              <div
+                class="ashade-progress-item"
+                data-delay="3000"
+                data-percent="87"
+              >
+                <span class="ashade-progress-label">
+                  Commercial Photography{this.props.skill4}
+                </span>
+              </div>
+            </div>
           </div>
-          {/* <!-- .ashade-col --> */}
         </div>
-        {/* <!-- .ashade-row --> */}
-      </section>
+      </div>
+    </section>
     );
   }
 }

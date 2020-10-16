@@ -25,7 +25,9 @@ class Bio extends React.Component {
                 companies. And all of this may be yours, just get in touch.
                 {this.props.bio}
               </span>
-
+              <div class="ashade-contact-form__submit">
+										<input type="submit" value="Edit profile"/>
+									</div>
               <div className="align-right ashade-signature-wrap">
                 <img
                   src="img/general/signature.png"
@@ -35,9 +37,10 @@ class Bio extends React.Component {
                 />
               </div>
             </div>
+            
             <div className="ashade-col col-6 align-bottom hide-on-tablet-port hide-on-phone">
               <img
-                src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"
+                src="https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg"
                 // {this.props.profImage}
                 alt="profileImage"
                 width="1240"
@@ -46,6 +49,7 @@ class Bio extends React.Component {
             </div>
           </div>
           {/* <!-- .ashade-row --> */}
+         
         </section>
       
     );

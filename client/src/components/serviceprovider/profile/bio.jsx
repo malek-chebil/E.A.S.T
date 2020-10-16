@@ -24,7 +24,9 @@ class Bio extends React.Component {
                 companies. And all of this may be yours, just get in touch.
                 {this.props.bio}
               </span>
-
+              <div class="ashade-contact-form__submit">
+										<input type="submit" value="Edit profile"/>
+									</div>
               <div className="align-right ashade-signature-wrap">
                 <img
                   src="img/general/signature.png"
