@@ -37,8 +37,6 @@ class Home extends React.Component {
             </div>
         </div>
         
-
-       
         <div className="ashade-home-block-overlay"></div>
         <div className="ashade-menu-overlay"></div>
         <div className="ashade-aside-overlay"></div>
