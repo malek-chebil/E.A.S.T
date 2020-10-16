@@ -5,6 +5,7 @@ import Navbar from "./components/navbar.jsx"
 import Asidebar from "./components/asidebar.jsx"
 import Home from "./components/home.jsx"
 import Footer from "./components/footer.jsx"
+import FreelancerProfile from "./components/serviceprovider/profile/FLProfile.jsx"
 class App extends React.Component {
     constructor(props){
         super(props)
@@ -20,7 +21,7 @@ class App extends React.Component {
         </aside>
         
         {/* <Home/> */}
-        <Market/> 
+        <FreelancerProfile /> 
       </div>
     }
   }

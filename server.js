@@ -1,5 +1,5 @@
 const express = require('express')
-const {connection}=require("./Data-Base/database")
+// const {connection}=require("./Data-Base/database")
 const PORT = 3000
 const app = express()
 
