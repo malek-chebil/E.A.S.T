@@ -5,115 +5,41 @@ class Studio extends React.Component {
   }
   render() {
     return (
-      <section className="ashade-section">
-        <div className="ashade-row">
-          <div className="ashade-col col-12 align-center">
+      <section class="ashade-section">
+        <div class="ashade-row">
+          <div class="ashade-col col-12 align-center">
             <h3>
               <span>Where magic is happening</span>
-              My work
+              My Work
             </h3>
-            <p className="ashade-intro">
-              <span>
-                This is the place, where I can work with lights and shadows to
-                create something brilliant. I'm talking about my photo studio
-                that is located at 1250 Welton St, Denver. Here we can discuss
-                and create your photo portfolio in comfortable and professional
-                atmosphere.{this.props.studioDescription}
-              </span>
+            <p class="ashade-intro">
+              {" "}
+              This is the place, where I can work with lights and shadows to
+              create something brilliant. I'm talking about my photo studio that
+              is located at 1250 Welton St, Denver. Here we can discuss and
+              create your photo portfolio in comfortable and professional
+              atmosphere.{this.props.studioDescription}
             </p>
           </div>
           {/* <!-- .ashade-col --> */}
         </div>
         {/* <!-- .ashade-row --> */}
-        <div className="ashade-row">
-          <div className="ashade-col col-12">
-            <div className="ashade-grid ashade-grid-4cols">
-              <div className="ashade-grid-item">
-                <a
-                  href="img/general/studio01.png"
-                  className="ashade-lightbox-link"
-                  data-size="1160x920"
-                >
-                  <img
-                    src="img/null.png"
-                    data-src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"
-                    className="lazy"
-                    alt="My Studio"
-                    width="1160"
-                    height="920"
-                  />
-                </a>
-              </div>
-              {/* <!-- .ashade-album-item --> */}
-              <div className="ashade-grid-item">
-                <a
-                  href="img/general/studio02.png"
-                  className="ashade-lightbox-link"
-                  data-size="1160x920"
-                >
-                  <img
-                    src="img/null.png"
-                    data-src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"
-                    className="lazy"
-                    alt="My Studio"
-                    width="1160"
-                    height="920"
-                  />
-                </a>
-              </div>
-              {/* <!-- .ashade-album-item --> */}
-              <div className="ashade-grid-item">
-                <a
-                  href="img/general/studio03.png"
-                  className="ashade-lightbox-link"
-                  data-size="1160x920"
-                >
-                  <img
-                    src="img/null.png"
-                    data-src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"
-                    className="lazy"
-                    alt="My Studio"
-                    width="1160"
-                    height="920"
-                  />
-                </a>
-              </div>
-              {/* <!-- .ashade-album-item --> */}
-              <div className="ashade-grid-item">
-                <a
-                  href="img/general/studio04.png"
-                  className="ashade-lightbox-link"
-                  data-size="1160x920"
-                >
-                  <img
-                    src="img/null.png"
-                    data-src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"
-                    className="lazy"
-                    alt="My Studio"
-                    width="1160"
-                    height="920"
-                  />
-                </a>
-              </div>
-              <div className="ashade-grid-item">
-                <a
-                  href="img/general/studio04.png"
-                  className="ashade-lightbox-link"
-                  data-size="1160x920"
-                >
-                  <img
-                    src="img/null.png"
-                    data-src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"
-                    className="lazy"
-                    alt="My Studio"
-                    width="1160"
-                    height="920"
-                  />
-                </a>
-              </div>
-              {/* <!-- .ashade-album-item --> */}
+        <div class="ashade-row">
+          <div class="ashade-col col-12">
+            <div
+              class="ashade-before-after"
+              data-img-before="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png"
+              data-img-after="https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg"
+            >
+              <img
+                src="img/general/before.png"
+                alt="Photo Processing"
+                width="1920"
+                height="1280"
+              />
             </div>
-            {/* <!-- .ashade-grid --> */}
+            
+            {/* <!-- .ashade-before-after --> */}
           </div>
           {/* <!-- .ashade-col --> */}
         </div>

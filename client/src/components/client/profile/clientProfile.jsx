@@ -2,10 +2,9 @@ import React from "react";
 import AboutMe from "./aboutMe.jsx";
 import BackToTop from "./backToTop.jsx";
 import Bio from "./bio.jsx";
-import Studio from "./studio.jsx";
-import ProfileInfo from "./profInfo.jsx";
-import Feedbacks from "./feedbacks.jsx";
-class FreelancerProfile extends React.Component {
+import JobOffersProf from "./jobOffers.jsx";
+import ProfileStats from "./profIStats.jsx";
+class ClientProfile extends React.Component {
   constructor() {
     super();
   }
@@ -18,10 +17,8 @@ class FreelancerProfile extends React.Component {
           <div className="ashade-content-scroll">
             <div className="ashade-content">
               <Bio />
-              <ProfileInfo />
-              <Studio />
-              <Feedbacks />
-
+              <ProfileStats />
+              <JobOffersProf />
             </div>
           </div>
         </main>
@@ -29,4 +26,4 @@ class FreelancerProfile extends React.Component {
     );
   }
 }
-export default FreelancerProfile;
+export default ClientProfile;

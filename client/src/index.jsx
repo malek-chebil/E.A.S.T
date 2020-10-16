@@ -5,7 +5,9 @@ import Navbar from "./components/navbar.jsx"
 import Asidebar from "./components/asidebar.jsx"
 import Home from "./components/home.jsx"
 import Footer from "./components/footer.jsx"
-import FreelancerProfile from "./components/serviceprovider/profile/FLProfile.jsx"
+import FreelancerProfile from "./components/serviceprovider/profile/FLProfile.jsx";
+import ClientProfile from "./components/client/profile/clientProfile.jsx";
+
 class App extends React.Component {
     constructor(props){
         super(props)
