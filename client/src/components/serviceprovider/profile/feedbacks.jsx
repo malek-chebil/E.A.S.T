@@ -16,7 +16,6 @@ class Feedbacks extends React.Component {
               <div className="ashade-col col-2"></div>
               <div className="ashade-col col-8">
                 <div className="ashade-testimonials-carousel">
-                  <div className="ashade-tns-container" id="testimonials01">
                     <div className="ashade-testimonials-item align-center swiper-slide">
                       <div className="ashade-testimonials-item__content">
                         <p>
@@ -149,7 +148,7 @@ class Feedbacks extends React.Component {
               <div className="ashade-col col-2"></div>
             </div>
           </div>
-        </div>
+       
       </section>
     );
   }
