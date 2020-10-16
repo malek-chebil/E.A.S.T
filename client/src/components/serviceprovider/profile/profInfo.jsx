@@ -9,30 +9,33 @@ class ProfileInfo extends React.Component {
         <div className="ashade-row ashade-keep-on-tablet">
           <div className="ashade-col col-3">
             <div className="ashade-counter-item" data-delay="3000">
-              <span className="ashade-counter-label">Awards Won</span>
-              <span className="ashade-counter-value">25</span>
+              <span className="ashade-counter-label">Skills (%)</span>
+    <span className="ashade-counter-value">25{this.props.stats}</span>
+              
             </div>
           </div>
           {/* <!-- .ashade-col --> */}
           <div className="ashade-col col-3">
             <div className="ashade-counter-item" data-delay="3000">
-              <span className="ashade-counter-label">Projects Done</span>
-              <span className="ashade-counter-value">67</span>
+              <span className="ashade-counter-label">Skills (%)</span>
+              <span className="ashade-counter-value">67{this.props.stats}</span>
+              
             </div>
           </div>
           {/* <!-- .ashade-col --> */}
           <div className="ashade-col col-3">
             <div className="ashade-counter-item" data-delay="3000">
-              <span className="ashade-counter-label">Happy Clients</span>
-              <span className="ashade-counter-value">211</span>
+              <span className="ashade-counter-label">Skills (%)</span>
+              <span className="ashade-counter-value">211{this.props.stats}</span>
+              
             </div>
           </div>
           {/* <!-- .ashade-col --> */}
           <div className="ashade-col col-3">
             <div className="ashade-counter-item" data-delay="2000">
-              <span className="ashade-counter-label">Greatest Shots</span>
-              <span className="ashade-counter-value">5896</span>
-            </div>
+              <span className="ashade-counter-label">Skills (%)</span>
+    <span className="ashade-counter-value">5896{this.props.stats}</span>
+              </div>
           </div>
           {/* <!-- .ashade-col --> */}
         </div>
