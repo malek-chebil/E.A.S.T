@@ -1,13 +1,38 @@
 const express = require('express')
 var router = express.Router();
-/*Login*/
+const Client=require("../Data-Base/client/client")
 
-router.get('/', function(req, res, next) {
-    res.send('respond with a resource');
+             /*Login Client*/
+
+router.post('/Login', function(req, res, next) {
+
+  Client.loginClient({FisrtName:'alaa',LastName:'lassoued',Email:'d',Password:'0000',Gender:'hello',Age:21,City:'tunis',Adresse:"mg",Field:"designe"},(result,error)=>{
+     if(result.userData){
+         delete result.userData.password
+ res.send({Login:true,userData:result.userData})
+     }else{
+ res.send({Login:false,userData:result.userData})
+}
+ })
   });
 
-router.get('/', function(req, res, next) {
-    res.send('respond with a resource');
-  });
-  
+             /*Signup Client*/
+
+router.post('/Signup', function(req, res, next) {
+
+  Client.SignupClient( {FisrtName:'alaa',LastName:'lassoued',Email:'d',Password:'0000',Gender:'hello',Age:21,City:'tunis',Adresse:"mg",Field:"designe"},(result,error)=>{
+  if(error){
+      if(error.code=="ER_DUP_ENTRY"){
+          res.send({Dup:true})
+         }else{
+           throw error
+           res.send(error)
+         }
+    }else{
+          res.send({Signup:true})
+        }
+    })
+});
+ 
 module.exports=router
+
