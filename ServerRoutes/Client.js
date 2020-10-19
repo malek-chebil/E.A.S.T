@@ -6,7 +6,7 @@ const Client=require("../Data-Base/client/client")
 
 router.post('/Login', function(req, res, next) {
 
-  Client.loginClient({FisrtName:'alaa',LastName:'lassoued',Email:'d',Password:'0000',Gender:'hello',Age:21,City:'tunis',Adresse:"mg",Field:"designe"},(result,error)=>{
+  Client.loginClient(req.body,(result,error)=>{
      if(result.userData){
          delete result.userData.password
  res.send({Login:true,userData:result.userData})
@@ -15,12 +15,11 @@ router.post('/Login', function(req, res, next) {
 }
  })
   });
-
              /*Signup Client*/
 
 router.post('/Signup', function(req, res, next) {
 
-  Client.SignupClient( {FisrtName:'alaa',LastName:'lassoued',Email:'d',Password:'0000',Gender:'hello',Age:21,City:'tunis',Adresse:"mg",Field:"designe"},(result,error)=>{
+  Client.SignupClient( req.body,(result,error)=>{
   if(error){
       if(error.code=="ER_DUP_ENTRY"){
           res.send({Dup:true})
