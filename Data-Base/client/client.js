@@ -18,7 +18,6 @@ const loginClient=(req,callback)=>{
       }); 
   }
 
-
 const SignupClient=(req,callback)=>{
     var hash = bcrypt.hashSync(req.Password, salt);
     var query=`INSERT INTO Clients (FisrtName,LastName,Email,password,Gender,Age,City,Adresse) values ('${req.FisrtName}','${req.LastName}','${req.Email}','${hash}','${req.Gender}',${req.Age},'${req.City}','${req.Adresse}');`

@@ -15,7 +15,6 @@ router.post('/Login', function(req, res, next) {
 }
  })
   });
-
              /*Signup FreeLancer*/
 
 router.post('/Signup', function(req, res, next) {
