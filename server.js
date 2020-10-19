@@ -8,19 +8,19 @@ const Freelancer=require("./ServerRoutes/FreeLancer")
 app.use(express.json()); 
 app.use(express.static(__dirname + '/client/dist'));
 
-// connection.connect(function(err) {
-//     if (err) throw err;
-//     console.log("Connected!");
-//   });
+         /* Db Connection*/
 
-app.post('/', function (req, res) { 
-    console.log(req.body.name) 
-    res.end(); 
-});
+connection.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
 
-app.get("*",(req,res)=>{
-res.sendFile(__dirname +"/client/dist/index.html")
-})
+          /*Routes*/
+
+app.use('/Client', client);
+app.use('/FreeLancer', Freelancer);
+
+        /*Server Connection*/
 
 app.listen(PORT, function(err){ 
     if (err) console.log(err); 
