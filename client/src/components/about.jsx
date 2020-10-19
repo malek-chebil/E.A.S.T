@@ -7,12 +7,12 @@ class About extends React.Component {
     render() {
       return (
         <div>
-          <div className="ashade-page-title-wrap">
+          {/* <div className="ashade-page-title-wrap">
         <h1 className="ashade-page-title">
             <span>Who we are?</span>
             About US
         </h1>
-    </div>
+    </div> */}
 
     <main className="ashade-content-wrap">
       

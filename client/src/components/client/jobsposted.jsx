@@ -7,14 +7,14 @@ class JobsPosted extends React.Component {
 
     render() {
       return <div>
-      <div className="ashade-page-title-wrap">
+      {/* <div className="ashade-page-title-wrap">
             <h1 className="ashade-page-title">
                 <span>Check Your posts</span>
                 Posted Jobs
             </h1>
-        </div>
+        </div> */}
     
-        <main className="ashade-content-wrap">
+        <main className="ashade-content-wrap" id="paddingtop">
         <div className="ashade-content-scroll">
           <div className="ashade-content">
             <section className="ashade-section">

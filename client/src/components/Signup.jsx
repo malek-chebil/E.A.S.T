@@ -51,14 +51,9 @@ class Signup extends React.Component {
                  <option value="female">female</option>
                    </select>
        <div className="form-group">
-           <input type="text" className="form-control" placeholder="Your Country " />
-       </div>
-       <div className="form-group">
            <input type="text" className="form-control" placeholder="Your City " />
        </div>
-       <div className="form-group">
-           <input type="text" className="form-control" placeholder="Your Postal Code " />
-       </div>
+
        <label htmlFor="Your Field">Your Field</label>
        <select className="select" className="LoginSignupInp" name="Your Field">
                  <option value="Designer">3D Designer</option>
@@ -96,14 +91,9 @@ class Signup extends React.Component {
             <option value="female">female</option>
               </select>
   <div className="form-group">
-      <input type="text" className="form-control" placeholder="Your Country " />
-  </div>
-  <div className="form-group">
       <input type="text" className="form-control" placeholder="Your City " />
   </div>
-  <div className="form-group">
-      <input type="text" className="form-control" placeholder="Your Postal Code " />
-  </div>
+
   <div className="form-group">
   <input type="submit" className="btnSubmit"  value="Signup" />       <input type="submit" className="btnSubmit"  value="Login" />
   </div>

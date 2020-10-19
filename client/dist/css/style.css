@@ -2697,17 +2697,34 @@ p.ashade-intro {
     transition: background 0.3s, border 0.3s;
 }
 /* --- Signup --- */
-.signup-form-1 {
-    background: #282726;
-	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-	border: solid 1px;
-	max-width: 1000px;
-	margin: auto;
-    width: 62%;
-	padding: 10px;
-	margin-top: 200px;
-	
-}
+  
+  @media screen and (max-width: 800px) {
+	.signup-form-1 {
+		background: #282726;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+		border: solid 1px;
+		max-width: 1000px;
+		margin: auto;
+		width: 95%;
+		padding: 10px;
+		margin-top: 200px;
+		
+	}
+  }
+  @media screen and (min-width: 800px) {
+	.signup-form-1 {
+		background: #282726;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+		border: solid 1px;
+		max-width: 1000px;
+		margin: auto;
+		width: 40%;
+		padding: 10px;
+		margin-top: 200px;
+	}
+
+  }
+
 
 #btn {
 	position: relative;
@@ -2721,6 +2738,10 @@ p.ashade-intro {
 }
 
 /* ///Login Signup inputs// */
+
+#h3login{
+	text-align: center;
+}
 .LoginSignupInp{
 	display: block;
     width: 100%;
@@ -2756,3 +2777,6 @@ p.ashade-intro {
 	float: left;
 }
 
+#paddingtop{
+	padding-top: 138px;
+}
