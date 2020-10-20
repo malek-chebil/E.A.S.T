@@ -1,7 +1,3 @@
-
-
-//////
-//////this page is for 90 min back up dont delete it;
 import React from "react";
 class Studio extends React.Component {
   constructor() {

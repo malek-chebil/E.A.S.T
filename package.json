@@ -1,5 +1,5 @@
 {
-  "name": "east",
+  "name": "e.a.s.t",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -18,6 +18,17 @@
     "url": "https://github.com/alaa-lasoued/E.A.S.T/issues"
   },
   "homepage": "https://github.com/alaa-lasoued/E.A.S.T#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
@@ -25,17 +36,5 @@
     "babel-loader": "^8.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.4.0",
-    "axios": "^0.20.0",
-    "express": "^4.17.1",
-    "light-toast": "^0.3.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-redux": "^7.2.1",
-    "react-toastify": "^6.0.8",
-    "redux": "^4.0.5",
-    "socket.io": "^2.3.0"
   }
 }
