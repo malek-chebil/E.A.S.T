@@ -2672,3 +2672,114 @@ p.ashade-intro {
 	height: 100%;
 	transform: translateX(5px);
 }
+/* *Post Job* */
+.PostJobForm{
+	position: relative;
+	top: 290px;
+	margin: auto;
+    width: 62%;
+    padding: 10px;
+}
+#selectFiled{
+	display: block;
+    width: 100%;
+    height: 50px;
+    color: #808080;
+    background: rgba(0,0,0,0);
+    border: 2px solid #313133;
+    border-radius: 0;
+    padding: 15px 20px 15px 20px;
+    margin: 0 0 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    transition: background 0.3s, border 0.3s;
+}
+/* --- Signup --- */
+  
+  @media screen and (max-width: 800px) {
+	.signup-form-1 {
+		background: #282726;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+		border: solid 1px;
+		max-width: 1000px;
+		margin: auto;
+		width: 95%;
+		padding: 10px;
+		margin-top: 200px;
+		
+	}
+  }
+  @media screen and (min-width: 800px) {
+	.signup-form-1 {
+		background: #282726;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+		border: solid 1px;
+		max-width: 1000px;
+		margin: auto;
+		width: 40%;
+		padding: 10px;
+		margin-top: 200px;
+	}
+
+  }
+
+
+#btn {
+	position: relative;
+	left: 40%;
+    
+}
+#forgetpass{
+	position: relative;
+	left: 40%;
+	top: 7px;
+}
+
+/* ///Login Signup inputs// */
+
+#h3login{
+	text-align: center;
+}
+.LoginSignupInp{
+	display: block;
+    width: 100%;
+    height: 50px;
+    color: #808080;
+    background: rgba(0,0,0,0);
+    border: 2px solid #313133;
+    border-radius: 0;
+    padding: 15px 20px 15px 20px;
+    margin: 0 0 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* ////Switch-Consumer Btn/// */
+.SwitchConsumer{
+	background: #282726;
+	margin-bottom: 12px;
+	
+}
+
+#switchbtn1{
+	padding: 10px;
+	float: right;
+
+}
+
+#switchbtn2{
+	padding: 10px;
+	float: left;
+}
+
+#paddingtop{
+	padding-top: 138px;
+}
+#login-signup-header{
+	text-align: center;
+}

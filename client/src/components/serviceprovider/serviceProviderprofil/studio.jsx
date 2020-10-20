@@ -39,6 +39,7 @@ class Studio extends React.Component {
               />
             </div>
             
+            
             {/* <!-- .ashade-before-after --> */}
           </div>
           {/* <!-- .ashade-col --> */}

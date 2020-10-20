@@ -5,7 +5,7 @@ class ProfileInfo extends React.Component {
   }
   render() {
     return (
-      <section class="ashade-section">
+        <section class="ashade-section">
       <div class="ashade-row">
         <div class="ashade-col col-12 align-center">
           <h3>
