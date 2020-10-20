@@ -13,12 +13,11 @@ import Login from "./components/login.jsx"
 import About from "./components/about.jsx"
 import ProfileSP from "./components/serviceprovider/serviceProviderprofil/serviceproviderprofil.jsx"
 import ClientProfile from "./components/client/clientprofile/clientprofil.jsx"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route,Link} from "react-router-dom";
+              ////Redux///
+import {Provider} from "react-redux"
+import {createStore} from "redux"
+import {rootReducer} from "../../Redux/redux"
 
 class App extends React.Component {
     constructor(props){
@@ -30,7 +29,7 @@ class App extends React.Component {
     render() {
       return <div>
       <Router>
-        <Navbar/>
+      <Navbar/>
         <aside id="ashade-aside">
          <Asidebar/>
          </aside> 
@@ -49,5 +48,7 @@ class App extends React.Component {
       </div>
     }
   }
+const store=createStore(rootReducer)
 
-ReactDOM.render(<App/>,document.getElementById('app'))
+ReactDOM.render(<Provider store={store}><App/></Provider>,document.getElementById('app'))
+
