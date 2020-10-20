@@ -25,7 +25,7 @@ const loginClient=async (req,callback)=>{
 
 const SignupClient=async (req,callback)=>{
   try{
-    if(req.password){
+    if(req.Password){
       var hash = bcrypt.hashSync(req.Password, salt);
       var query=`INSERT INTO Clients (FisrtName,LastName,Email,password,Gender,Age,City,Adresse) values ('${req.FisrtName}','${req.LastName}','${req.Email}','${hash}','${req.Gender}',${req.Age},'${req.City}','${req.Adresse}');`
       connection.query(query, function (error, results, fields) {callback(results,error)});
