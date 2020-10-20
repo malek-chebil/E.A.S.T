@@ -18,6 +18,7 @@ console.log(req.body)
              /*Signup FreeLancer*/
 
 router.post('/Signup', function(req, res, next) {
+
     if(Object.keys(req.body).length){
  FreeLancer.SignupFreeLancer(req.body,(result,error)=>{
   if(error){
