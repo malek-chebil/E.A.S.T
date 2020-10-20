@@ -29,7 +29,7 @@ const SignupFreeLancer=async (req,callback)=>{
   try{
     if(req.Password){
       var hash = bcrypt.hashSync(req.Password, salt);
-      var query=`INSERT INTO Clients (FisrtName,LastName,Email,password,Gender,Age,City,Adresse,Field) values ('${req.FisrtName}','${req.LastName}','${req.Email}','${hash}','${req.Gender}',${req.Age},'${req.City}','${req.Adresse}','${req.Field}');`
+      var query=`INSERT INTO Freelancers (FirstName,LastName,Email,password,Gender,Age,City,Adresse,Field) values ('${req.FirstName}','${req.LastName}','${req.Email}','${hash}','${req.Gender}',${req.Age},'${req.City}','${req.Adresse}','${req.Field}');`
       connection.query(query, function (error, results, fields) {callback(results,error)});
     }
     ////dont forget this

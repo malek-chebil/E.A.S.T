@@ -21,6 +21,7 @@ router.post('/Login', function(req, res, next) {
              /*Signup Client*/
 
 router.post('/Signup', function(req, res, next) {
+  console.log(req.body)
 if(Object.keys(req.body).length){
   Client.SignupClient( req.body,(result,error)=>{
     if(error){
