@@ -5,6 +5,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+  import {connect} from "react-redux"
 class Navbar extends React.Component {
     constructor(props){
         super(props)
@@ -157,5 +158,13 @@ class Navbar extends React.Component {
     }
   }
 
-export default Navbar
+  const mapStateToProps = (state, ownProps) => {
+    return {
+      visitorNavbar:state.visitorNavbar
+    }
+  }
+ 
+
+  
+export default connect(mapStateToProps)(Navbar)
 

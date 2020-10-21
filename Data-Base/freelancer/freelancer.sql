@@ -1,7 +1,7 @@
 CREATE DATABASE east;
 
 CREATE TABLE Freelancers (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-     FisrtName VARCHAR(20) ,
+     FirstName VARCHAR(20) ,
      LastName VARCHAR(20),
      Email VARCHAR(50)  ,
      password VARCHAR(100),

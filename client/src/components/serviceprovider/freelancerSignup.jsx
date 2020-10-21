@@ -10,7 +10,7 @@ class FreelancerSignup extends React.Component {
       password: "",
       repass: "",
       age: "",
-      gender: "",
+      gender: "3D Designer",
       city: "",
       adress: "",
       field: "",
@@ -18,12 +18,13 @@ class FreelancerSignup extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
+  handleClick(e) {
+    e.preventDefault();
     let freelancerData = {
-      FisrtName: this.state.firstName,
+      FirstName: this.state.firstName,
       LastName: this.state.lastName,
       Email: this.state.Email,
-      password: this.state.password,
+      Password: this.state.password,
       Gender: this.state.gender,
       Age: this.state.age,
       City: this.state.city,
@@ -34,12 +35,13 @@ class FreelancerSignup extends React.Component {
       axios
         .post("/api/freeLancers/Signup", freelancerData)
         .then((data) => {
-          console.log(data);
+          console.log(data.data);
         })
         .catch((e) => {
           console.log(e);
         });
     }
+  
   }
 
   handleChange(e) {
@@ -52,6 +54,7 @@ class FreelancerSignup extends React.Component {
   render() {
     return (
       <div>
+        <form onSubmit={this.handleClick}>
         <div id="testeststst" onChange={this.handleChange}>
           <div className="form-group">
             <input
@@ -154,11 +157,11 @@ class FreelancerSignup extends React.Component {
               type="submit"
               className="btnSubmit"
               value="Signup"
-              onClick={this.handleClick}
             />{" "}
             <input type="submit" className="btnSubmit" value="Login" />
           </div>
         </div>
+        </form>
       </div>
     );
   }

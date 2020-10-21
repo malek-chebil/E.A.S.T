@@ -11,19 +11,20 @@ class ClientSignup extends React.Component {
       password: "",
       repass: "",
       age: "",
-      gender: "",
+      gender: "male",
       city: "",
       Adresse: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
+  handleClick(e) {
+    e.preventDefault();
     let clientData = {
-      FisrtName: this.state.firstName,
+      FirstName: this.state.firstName,
       LastName: this.state.lastName,
       Email: this.state.Email,
-      password: this.state.password,
+      Password: this.state.password,
       Gender: this.state.gender,
       Age: this.state.age,
       City: this.state.city,
@@ -50,6 +51,7 @@ class ClientSignup extends React.Component {
   render() {
     return (
       <div>
+             <form onSubmit={this.handleClick}>
         <div onChange={this.handleChange}>
           <div className="form-group">
             <input
@@ -57,6 +59,7 @@ class ClientSignup extends React.Component {
               className="form-control"
               placeholder="Your First Name "
               name="firstName"
+              required
             />
           </div>
           <div className="form-group">
@@ -65,6 +68,7 @@ class ClientSignup extends React.Component {
               className="form-control"
               placeholder="Your Last Name "
               name="lastName"
+              required
             />
           </div>
           <div className="form-group">
@@ -73,6 +77,7 @@ class ClientSignup extends React.Component {
               className="form-control"
               placeholder="Your Email "
               name="Email"
+              required
             />
           </div>
           <div className="form-group">
@@ -81,6 +86,7 @@ class ClientSignup extends React.Component {
               className="form-control"
               placeholder="Your Password "
               name="password"
+              required
             />
           </div>
           <div className="form-group">
@@ -89,6 +95,7 @@ class ClientSignup extends React.Component {
               className="form-control"
               placeholder="Confirm Your Password "
               name="repass"
+              required
             />
           </div>
           <div className="form-group">
@@ -97,6 +104,7 @@ class ClientSignup extends React.Component {
               className="form-control"
               placeholder="Your Age "
               name="age"
+              required
             />
           </div>
           <label htmlFor="Your Gender">Your Gender</label>
@@ -115,6 +123,7 @@ class ClientSignup extends React.Component {
               className="form-control"
               placeholder="Your City "
               name="city"
+              required
             />
           </div>
           <div className="form-group">
@@ -122,7 +131,8 @@ class ClientSignup extends React.Component {
               type="text"
               className="form-control"
               placeholder="Your Adress "
-              name="adresse"
+              name="Adresse"
+              required
             />
           </div>
 
@@ -131,11 +141,12 @@ class ClientSignup extends React.Component {
               type="submit"
               className="btnSubmit"
               value="Signup"
-              onClick={this.handleClick}
+              required
             />{" "}
             <input type="submit" className="btnSubmit" value="Login" />
           </div>
         </div>
+        </form>
       </div>
     );
   }
