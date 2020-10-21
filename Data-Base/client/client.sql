@@ -7,5 +7,5 @@ CREATE TABLE Clients (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
      Age int,
      City VARCHAR(20),
      Adresse VARCHAR(40),
-     CONSTRAINT EmaiUn UNIQUE (Email,LastName)
+     CONSTRAINT EmaiUn UNIQUE (Email)
 );

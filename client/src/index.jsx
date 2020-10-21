@@ -33,7 +33,7 @@ class App extends React.Component {
         <aside id="ashade-aside">
          <Asidebar/>
          </aside> 
-         
+         <Switch>
          <Route exact path="/"  component={Home}/>
          <Route path="/About"  component={About}/>
          <Route path="/Login" component={Login}/>
@@ -44,6 +44,7 @@ class App extends React.Component {
          <Route path="/Jobsapplied" component={Jobsapplied}/>
          <Route path="/PostJob" component={PostJob}/>
          <Route path="/JobMarket" component={Market}/>
+         </Switch>
       </Router>
       </div>
     }

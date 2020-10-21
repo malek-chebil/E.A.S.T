@@ -1,8 +1,5 @@
 const initState={
-  visitorNavbar:["home","JobOffers","About","Login","signup"]
-
-
-
+  user:{}
 }
 
 const reducers = {

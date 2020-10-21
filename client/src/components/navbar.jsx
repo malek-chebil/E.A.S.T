@@ -28,12 +28,12 @@ class Navbar extends React.Component {
                 <nav className="ashade-nav">
                     <ul className="main-menu">
                         <li className="menu-item-has-children">
-                            <a href="#">Home</a>
+                   <Link to="/About"> Home</Link>
     
                          
                         </li>
 						<li className="menu-item-has-children">
-                            <a href="#">Works</a>
+                        <Link to="/About">  Works</Link>
                             <ul className="sub-menu">
                                 <li className="menu-item-has-children">
                                     <a href="#">Ribbon</a>
@@ -168,3 +168,4 @@ class Navbar extends React.Component {
   
 export default connect(mapStateToProps)(Navbar)
 
+visitorNavbar:["home","JobOffers","About","Login","signup"]
