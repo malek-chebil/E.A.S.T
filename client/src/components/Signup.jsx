@@ -32,6 +32,7 @@ class Signup extends React.Component {
   
   render() {
     return (<div>
+      
       <div  className="col-md-6 signup-form-1">
           <h3 id="login-signup-header">{this.state.Registration}</h3>
         <button
@@ -51,6 +52,7 @@ class Signup extends React.Component {
        {this.state.client ? <ClientSignup /> : <FreelancerSignup />}
       </div>
       <Footer />
+     
       </div>
     );
   }

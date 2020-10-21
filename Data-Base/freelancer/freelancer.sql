@@ -10,6 +10,6 @@ CREATE TABLE Freelancers (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
      City VARCHAR(20),
      Adresse VARCHAR(40),
      Field VARCHAR(20),
-     CONSTRAINT EmaiUn UNIQUE (Email,LastName)
+     CONSTRAINT EmaiUn UNIQUE (Email)
 );
 

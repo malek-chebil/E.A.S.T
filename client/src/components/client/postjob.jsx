@@ -56,7 +56,7 @@ class PostJob extends React.Component {
 								<div className="ashade-contact-form__footer">
 									<div className="ashade-contact-form__response"></div>
 									<div className="ashade-contact-form__submit">
-										<input type="submit" value="Send Message"/>
+										<input type="submit" value="Post your job"/>
                     
 									</div>
 								</div>
