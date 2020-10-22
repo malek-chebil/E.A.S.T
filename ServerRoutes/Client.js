@@ -1,9 +1,7 @@
 const express = require("express");
-const client = require("../Data-Base/client/client");
-var router = express.Router();
+const router = express.Router();
 const Client = require("../Data-Base/client/client");
 const jobs = require("../Data-Base/jobs/jobs");
-const job = require("../Data-Base/jobs/jobs")
 
               /*Login Client*/
 
@@ -57,5 +55,6 @@ router.post("/postJob", (req, res) => {
     })
   }
 });
+
 
 module.exports = router;
