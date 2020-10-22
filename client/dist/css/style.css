@@ -2996,3 +2996,29 @@ input:checked ~ .modal__overlay {
 	top: 300px;
 	left: 300px;
 }
+/* /////Aside Bar /// */
+#AsideBar{
+	margin: 0%;
+	padding: 10%;
+	text-align: center;
+	position: relative;
+	top: 100px;
+	height: 100px;
+	font-size: 50px;
+}
+@media screen and (max-width: 600px) {
+	#AsideBar{
+		margin: 0%;
+		padding: 0%;
+		text-align: center;
+		position: relative;
+		top: 130px;
+		height: 100px;
+	}
+  }
+  .AsideBarAppliedJobs{
+	  font-size:25px;
+  }
+
+  /* //signup Modal// */
+  

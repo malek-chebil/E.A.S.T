@@ -8,6 +8,7 @@ router.post('/Login', function(req, res, next) {
 console.log(req.body)
  FreeLancer.loginFreeLancer(req.body,(result,error)=>{
      if(result.userData){
+        result.userData.type="freelancer"
          delete result.userData.password
  res.send({Login:true,userData:result.userData})
      }else{
@@ -18,8 +19,9 @@ console.log(req.body)
              /*Signup FreeLancer*/
 
 router.post('/Signup', function(req, res, next) {
-
+    
     if(Object.keys(req.body).length){
+        console.log(req.body)
  FreeLancer.SignupFreeLancer(req.body,(result,error)=>{
   if(error){
       if(error.code=="ER_DUP_ENTRY"){

@@ -9,6 +9,7 @@ router.post('/Login', function(req, res, next) {
   if(Object.keys(req.body).length){
     Client.loginClient(req.body,(result,error)=>{
       if(result.userData){
+        result.userData.type="client"
           delete result.userData.password
   res.send({Login:true,userData:result.userData})
       }else{
