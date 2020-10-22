@@ -48,7 +48,7 @@ class JobDetails extends React.Component {
   <label htmlFor="modal__trigger">Apply Now</label>
   <div className="modal__overlay">
     <div className="modal__wrap">
-      <label for="modal__trigger">&#10006;</label>
+      <label htmlFor="modal__trigger">&#10006;</label>
       <h2>Application</h2>
      <div >Convince me</div> 
      <textarea name="" id="" cols="30" rows="10" id="detailtextarea"></textarea>

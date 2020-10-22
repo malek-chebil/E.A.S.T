@@ -3,12 +3,8 @@ import React from "react"
 class Home extends React.Component {
     constructor(props){
         super(props)
-        this.test=this.test.bind(this)
     }
-   
-    test(){
-      window.history.pushState("/Login")
-    }
+
     render() {    
       return  <div>
         <div className="ashade-page-title-wrap">
@@ -56,7 +52,6 @@ class Home extends React.Component {
           <span className="ashade-cursor-close ashade-cursor-label">Close</span>
           <span className="ashade-cursor-zoom ashade-cursor-label">Zoom</span>
         </div>
-        <button onClick={this.test} id="test0">click me</button>
       </div>
     }
   }

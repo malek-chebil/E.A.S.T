@@ -32,6 +32,10 @@ class Login extends React.Component {
                         alert("Check Again")
                     }else{
                         this.props.update(data.data.userData)
+                        if(data.data.userData.type=="freelancer"){
+                            this.props.ChangeUser('freelancer')
+                            this.props.ChangePage("/")
+                        }
                     }
     
                 }).catch(err => console.log(err))
@@ -49,6 +53,11 @@ class Login extends React.Component {
                         alert("Check Again")
                     }else{
                         this.props.update(data.data.userData)
+
+                        if(data.data.userData.type=="client"){
+                             this.props.ChangeUser('client')
+                            this.props.ChangePage("/")
+                        }
                     }
 
                 }).catch(err => console.log(err))

@@ -25,23 +25,29 @@ class App extends React.Component {
     constructor(props){
         super(props)
         this.state={
-    page:""
+    user:'visitor',
+    page:''
         }
-   
+   this.ChangePage=this.ChangePage.bind(this)
+   this.ChangeUser=this.ChangeUser.bind(this)
     }
     
-    componentDidMount(){
-      var pathname = window.location.pathname;
-    if(pathname==="/"){
+     ChangeUser(user){
+ this.setState({user})
+     }
+     
+    ChangePage(pathname){
+      console.log("pathname",pathname)
+     if(pathname==="/"){
       this.setState({page:<Home/>})
     }else if(pathname==="/About"){
-      this.setState({page: <About/>})
+      this.setState({page:<About/>})
     }else if(pathname==="/profile"){
       this.setState({page:<ClientProfile/>})
     }else if(pathname==="/Profile"){ //UpperCase P
-      this.setState({page: <ProfileSP/>})
+      this.setState({page:<ProfileSP/>})
     }else if(pathname==="/JobsPosted"){
-      this.setState({page: <JobsPosted/>})
+      this.setState({page:<JobsPosted/>})
     }else if(pathname==="/Jobsapplied"){
       this.setState({page:<Jobsapplied/>})
     }else if(pathname==="/PostJob"){
@@ -50,28 +56,26 @@ class App extends React.Component {
       this.setState({page:<Market/>})
     }else if(pathname==="/JobDetails"){
       this.setState({page:<JobDetails/>})
-    }console.log(this.state.page)
+    }else if(pathname==="/Signup"){
+      this.setState({page:<Signup/>})
+    }else if(pathname==="/Login"){
+      this.setState({page:<Login ChangeUser={this.ChangeUser} ChangePage={this.ChangePage}/>})
+    }
+    }
+
+    componentDidMount(){
+  var pathname = window.location.pathname;
+  this.ChangePage(pathname)
     }
     
     render() {
       return <div>
-      <Navbar/>
+      <Navbar routes={this.ChangePage} user={this.state.user}/>
         <aside id="ashade-aside">
-         <Asidebar/>
+         <Asidebar user={this.state.user} routes={this.ChangePage}/>
          </aside> 
         {this.state.page}
-         {/* <Home/>
-         <About/>
-         <Login/>
-         <Signup/>
-         <ProfileSP/>
-         <ClientProfile/>
-         <JobsPosted/>
-         <Jobsapplied/>
-         <PostJob/>
-         <Market/>
-         <JobDetails/> */}
-
+        
       </div>
     }
   }
