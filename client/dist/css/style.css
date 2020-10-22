@@ -2784,6 +2784,24 @@ p.ashade-intro {
 #login-signup-header{
 	text-align: center;
 }
+@media screen and (min-width: 800px) {
+#contract {
+	margin: auto;
+	position: relative ;
+	text-align: center;
+	margin-top: 400px;
+
+}
+}
+@media screen and (min-width: 800px) {
+#contractImg {
+	margin: auto;
+	position: relative ;
+	margin-left: 280px;
+	height: 800px;
+	width: 800px;
+}
+}
 
 @media screen and (max-width: 800px) {
 	.imgpostjob{

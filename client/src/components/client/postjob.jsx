@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../footer.jsx";
 import axios from "axios";
-
+import { connect } from "react-redux";
 class PostJob extends React.Component {
   constructor(props) {
     super(props);
@@ -11,14 +11,16 @@ class PostJob extends React.Component {
       jobTitle: "",
       fields: "",
       jobDescription: "",
+      user: this.props.user,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(e) {
+    console.log(this.state.user);
     e.preventDefault();
-    console.log("i'm here");
     var jobData = {
+      client_id: this.state.user.client_id,
       jobTitle: this.state.jobTitle,
       fields: this.state.fields,
       imgUrl: this.state.imgUrl,
@@ -28,6 +30,12 @@ class PostJob extends React.Component {
       .post("/api/clients/postJob", jobData)
       .then((data) => {
         console.log(data);
+        this.setState({
+          jobTitle: "",
+          fields: "",
+          imgUrl: "",
+          jobDescription: "",
+        });
       })
       .catch((e) => {
         console.error(e);
@@ -88,11 +96,11 @@ class PostJob extends React.Component {
               />
             </div>
             <div className="ashade-col col-4">
-              <select name="fields"  id="selectFiled">
+              <select name="fields" id="selectFiled">
                 <option hidden name="choose" value="select Field">
                   Select your Field
                 </option>
-                
+
                 <option name="Design" value="Design">
                   Design
                 </option>
@@ -139,5 +147,10 @@ class PostJob extends React.Component {
     );
   }
 }
+const mapStateToProps = (state, ownProps) => {
+  return {
+    user:state.user
+  }
+}
 
-export default PostJob;
+export default connect(mapStateToProps)(PostJob);

@@ -1,8 +1,15 @@
 const initState={
-  visitorNavbar:["home","JobOffers","About","Login","signup"]
-
-
-
+  user:{ 
+    client_id: 3,
+    FirstName : "malek",
+    LastName : "chebil",
+    Email : "malek@gmail.com",
+    Adresse: "tunis",
+    Gender : "Male",
+    Age : 28 ,
+    City : "Tunis",
+    Feald : "Designer"
+  }
 }
 
 const reducers = {

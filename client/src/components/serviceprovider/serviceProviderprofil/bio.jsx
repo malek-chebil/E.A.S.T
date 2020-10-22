@@ -45,6 +45,33 @@ class Bio extends React.Component {
               />
             </div>
           </div>
+          <div class="ashade-contact-details">
+								<h4 class="ashade-contact-details__title">
+									<span>My Contacts and Socials</span>
+									How to Find Me
+								</h4>
+								<ul class="ashade-contact-details__list">
+									<li>
+										<i class="ashade-contact-icon la la-map-marker"></i>
+										1250 Welton St, Denver, CO 80204
+									</li>
+									<li>
+										<i class="ashade-contact-icon la la-phone"></i>
+										<a href="tel:+11234567890">+1 (123) 456 - 78 - 90</a>
+									</li>
+									<li>
+										<i class="ashade-contact-icon la la-envelope"></i>
+										<a href="mailto:a.shade@example.com">a.shade@example.com</a>
+									</li>
+									<li class="ashade-contact-socials">
+										<i class="ashade-contact-icon la la-share-alt"></i>
+										<a href="facebook.com" target="_blank">Fb</a>
+										<a href="twitter.com" target="_blank">Tw</a>
+										<a href="instagram.com" target="_blank">In</a>
+										<a href="500px.com" target="_blank">Px</a>
+									</li>
+								</ul>
+							</div>
         </section>
       
     );
