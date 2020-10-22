@@ -66,6 +66,7 @@ class Login extends React.Component {
     render() {
       return <div>
           <div className="col-md-6 signup-form-1">
+        
         <h3 id="h3login">{this.state.Registration}</h3>
         <button className="SwitchConsumer" id="switchbtn1" onClick={this.serviceprovider}>Serviceprovider</button> <button className="SwitchConsumer" id="switchbtn2" onClick={this.client}>Client</button>
         {this.state.serviceprovider?

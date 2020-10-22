@@ -13,7 +13,9 @@ import Login from "./components/login.jsx"
 import About from "./components/about.jsx"
 import ProfileSP from "./components/serviceprovider/serviceProviderprofil/serviceproviderprofil.jsx"
 import ClientProfile from "./components/client/clientprofile/clientprofil.jsx"
-import {BrowserRouter as Router, Switch, Route,Link} from "react-router-dom";
+import JobDetails from "./components/jobdetails.jsx"
+
+
               ////Redux///
 import {Provider} from "react-redux"
 import {createStore} from "redux"
@@ -23,29 +25,53 @@ class App extends React.Component {
     constructor(props){
         super(props)
         this.state={
-
+    page:""
         }
+   
     }
+    
+    componentDidMount(){
+      var pathname = window.location.pathname;
+    if(pathname==="/"){
+      this.setState({page:<Home/>})
+    }else if(pathname==="/About"){
+      this.setState({page: <About/>})
+    }else if(pathname==="/profile"){
+      this.setState({page:<ClientProfile/>})
+    }else if(pathname==="/Profile"){ //UpperCase P
+      this.setState({page: <ProfileSP/>})
+    }else if(pathname==="/JobsPosted"){
+      this.setState({page: <JobsPosted/>})
+    }else if(pathname==="/Jobsapplied"){
+      this.setState({page:<Jobsapplied/>})
+    }else if(pathname==="/PostJob"){
+      this.setState({page:<PostJob/>})
+    }else if(pathname==="/Market"){
+      this.setState({page:<Market/>})
+    }else if(pathname==="/JobDetails"){
+      this.setState({page:<JobDetails/>})
+    }console.log(this.state.page)
+    }
+    
     render() {
       return <div>
-      <Router>
       <Navbar/>
         <aside id="ashade-aside">
          <Asidebar/>
          </aside> 
-         <Switch>
-         <Route exact path="/"  component={Home}/>
-         <Route path="/About"  component={About}/>
-         <Route path="/Login" component={Login}/>
-         <Route path="/Signup" component={Signup}/>
-         <Route path="/AccountS" component={ProfileSP}/>
-         <Route path="/AccountC" component={ClientProfile}/>
-         <Route path="/JobsPosted" component={JobsPosted}/>
-         <Route path="/Jobsapplied" component={Jobsapplied}/>
-         <Route path="/PostJob" component={PostJob}/>
-         <Route path="/JobMarket" component={Market}/>
-         </Switch>
-      </Router>
+        {this.state.page}
+         {/* <Home/>
+         <About/>
+         <Login/>
+         <Signup/>
+         <ProfileSP/>
+         <ClientProfile/>
+         <JobsPosted/>
+         <Jobsapplied/>
+         <PostJob/>
+         <Market/>
+         <JobDetails/> */}
+
       </div>
     }
   }

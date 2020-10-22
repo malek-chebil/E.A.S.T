@@ -28,12 +28,12 @@ class Navbar extends React.Component {
                 <nav className="ashade-nav">
                     <ul className="main-menu">
                         <li className="menu-item-has-children">
-                   <Link to="/About"> Home</Link>
+                        <a href="#"> Home</a>
     
                          
                         </li>
 						<li className="menu-item-has-children">
-                        <Link to="/About">  Works</Link>
+                        <a href="#">  Works</a> 
                             <ul className="sub-menu">
                                 <li className="menu-item-has-children">
                                     <a href="#">Ribbon</a>
