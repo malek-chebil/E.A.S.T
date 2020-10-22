@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {connect} from "react-redux"
 class Bio extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+   
   }
   render() {
     return (
@@ -11,37 +13,55 @@ class Bio extends React.Component {
           <div className="ashade-row ashade-row-fullheight exclude-header" style={{position: "relative", top: "80px"}}>
             <div className="ashade-col col-6">
               <h2>
-                <span>Few Words About Myself</span>
-                Put UserName here{this.props.username}
+                <span>Client Name</span>
+                {this.props.user.FirstName} { this.props.user.LastName }
+                
               </h2>
-              <span>
-                {" "}
-                Put Biography here... .
-                Through the lens the world looks different and i would like to
-                show you this difference. I learned that from age 10, when I was
-                first time take photos on manual camera with my Dad. After that
-                with years of practice and tons of experience I learned the
-                techniques, that helps me in my work with modern brands and
-                companies. And all of this may be yours, just get in touch.
-                {this.props.bio}
-              </span>
-              <div class="ashade-contact-form__submit">
+              <div className="ashade-col col-8">
+							
+							<h6>
+								<span>Email</span>
+								{this.props.user.Email}
+							</h6>
+              <h6>
+								<span>Address</span>
+								{this.props.user.Adresse}
+							</h6>
+              <h6>
+								<span>Gender</span>
+								{this.props.user.Gender}
+							</h6>
+             
+              <h6>
+								<span>Age</span>
+								{this.props.user.Age}
+							</h6>
+						  <h6>
+								<span>City</span>
+								{this.props.user.City}
+							</h6>
+              
+							
+						
+						</div>
+              <div className="ashade-contact-form__submit">
 										<input type="submit" value="Edit profile"/>
 									</div>
-              <div className="align-right ashade-signature-wrap">
+              {/* <div className="align-right ashade-signature-wrap">
                 <img
                   src="img/general/signature.png"
                   alt="Signature"
                   width="200"
                   height="116"
                 />
-              </div>
+              </div> */}
             </div>
             
             <div className="ashade-col col-6 align-bottom hide-on-tablet-port hide-on-phone">
               <img
-                src="https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg"
+                src=" https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg"
                 // {this.props.profImage}
+                 
                 alt="profileImage"
                 width="1240"
                 height="1500"
@@ -55,4 +75,10 @@ class Bio extends React.Component {
     );
   }
 }
-export default Bio;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    user:state.user
+  }
+}
+
+export default connect(mapStateToProps)(Bio)

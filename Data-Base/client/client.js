@@ -1,6 +1,6 @@
 const {connection}=require("../database")
 var bcrypt = require('bcryptjs');
-const { get } = require("../../ServerRoutes/Client");
+const { get} = require("../../ServerRoutes/Client");
 var salt = bcrypt.genSaltSync(10);
 
 const loginClient= (req,callback)=>{
@@ -30,5 +30,5 @@ const SignupClient= (req,callback)=>{
 
   module.exports={
     loginClient,
-    SignupClient
+    SignupClient,
   }

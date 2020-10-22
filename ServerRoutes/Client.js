@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const client = require('../Data-Base/client/client');
 var router = express.Router();
 const Client=require("../Data-Base/client/client")
 
@@ -23,13 +24,13 @@ router.post('/Login', function(req, res, next) {
 router.post('/Signup', function(req, res, next) {
   console.log(req.body)
 if(Object.keys(req.body).length){
-  Client.SignupClient( req.body,(result,error)=>{
+  Client.SignupClient(req.body,(result,error)=>{
     if(error){
         if(error.code=="ER_DUP_ENTRY"){
             res.send({Dup:true})
            }else{
              throw error
-             res.send(error)
+            //  res.send(error)
            }
       }else{
             res.send({Signup:true})
@@ -39,6 +40,6 @@ if(Object.keys(req.body).length){
   res.send({Signup:false})
 }
 });
- 
+
 module.exports=router
 
