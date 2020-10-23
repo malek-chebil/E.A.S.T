@@ -2801,8 +2801,17 @@ p.ashade-intro {
 	height: 800px;
 	width: 800px;
 }
-}
 
+}
+@media screen and (min-width: 800px) {
+	#TandC {
+		margin: auto;
+		position: relative ;
+		/* margin-left: 280px; */
+		margin-top: 250px;
+		height: 800px;
+		width: 800px;
+	}
 @media screen and (max-width: 800px) {
 	.imgpostjob{
 		margin: auto;
