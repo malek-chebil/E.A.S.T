@@ -128,6 +128,15 @@ class PostJob extends React.Component {
                 required
               />
             </div>
+            <div className="ashade-col col-4">
+              <input
+                type="text"
+                id="ImgAddress"
+                name="imgUrl"
+                placeholder="Budget"
+                required
+              />
+            </div>
           </div>
           <textarea
             name="message"

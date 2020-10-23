@@ -2849,7 +2849,6 @@ p.ashade-intro {
 	}
 	#detailblock{
 		position: relative;
-		left: 50px;
 		width: 100%;
 	}
 	@media screen and (min-width: 1400px) {
@@ -3020,5 +3019,23 @@ input:checked ~ .modal__overlay {
 	  font-size:25px;
   }
 
-  /* //signup Modal// */
-  
+#fixmarketimg{
+	width: 155px;
+	height:155px;
+}
+
+#budgetP{
+	font-size: 50px;
+}
+#imgdet{
+	height: 155px;
+}
+.blacktext{
+	color:black
+}
+/* /////BackGrounds//// */
+#homeBackGround{
+background: url(https://w.wallhaven.cc/full/5w/wallhaven-5w1ev8.jpg);
+background-size: cover;
+}
+/* //////////////// */

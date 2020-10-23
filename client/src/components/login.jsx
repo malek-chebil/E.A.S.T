@@ -109,6 +109,9 @@ class Login extends React.Component {
         </div>
         :null}
     </div>
+    <br/>
+    <br/>
+    <br/>
         <Footer/>
       </div>;
     }
