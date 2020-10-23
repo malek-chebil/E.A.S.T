@@ -1,10 +1,23 @@
 import React from "react"
 import Footer from "./footer.jsx"
+import axios from "axios"
 class Market extends React.Component {
     constructor(props){
         super(props)
     }
-
+    componentDidMount() {
+        axios({
+          url: '/api/offers',
+          method: 'get',
+        }).then(data => {
+            console.log(data.data)
+          this.setState({
+            jobs: data.data
+          });
+        }).catch(error => {
+          console.log(error)
+        });
+      }
     render() {
       return <div>
     {/* <div className="ashade-page-title-wrap">
@@ -53,90 +66,7 @@ class Market extends React.Component {
 										</div>
 									</div>
                                 </div>
-                                	{/* <!-- .ashade-service-card --> */}
-                                    <div className="ashade-service-card">
-                                        <div className="ashade-service-card__head">
-                                            <div className="ashade-service-card__image">
-                                                <img src="img/services/thmb-nature.png" />
-                                            </div>
-                                            <div className="ashade-service-card__label">
-                                                <h4>
-                                                    <span>Photos of wild nature</span>
-                                                    Service Title
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        {/* <!-- .ashade-service-card__head --> */}
-                                        <div className="ashade-service-card__content">
-                                            <p>Job description Here</p>
-                                            <div className="align-right">
-                                                <a href="gallery-masonry-4columns.html" className="ashade-learn-more">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    	{/* <!-- .ashade-service-card --> */}
-                                <div className="ashade-service-card">
-									<div className="ashade-service-card__head">
-										<div className="ashade-service-card__image">
-											<img src="img/services/thmb-nature.png" />
-										</div>
-										<div className="ashade-service-card__label">
-											<h4>
-												<span>Photos of wild nature</span>
-												Service Title
-											</h4>
-										</div>
-                                    </div>
-                                    {/* <!-- .ashade-service-card__head --> */}
-									<div className="ashade-service-card__content">
-										<p>Job description Here</p>
-										<div className="align-right">
-											<a href="gallery-masonry-4columns.html" className="ashade-learn-more">Read More</a>
-										</div>
-									</div>
-                                </div>
-                                	{/* <!-- .ashade-service-card --> */}
-                                    <div className="ashade-service-card">
-                                        <div className="ashade-service-card__head">
-                                            <div className="ashade-service-card__image">
-                                                <img src="img/services/thmb-nature.png" />
-                                            </div>
-                                            <div className="ashade-service-card__label">
-                                                <h4>
-                                                    <span>Photos of wild nature</span>
-                                                    Service Title
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        {/* <!-- .ashade-service-card__head --> */}
-                                        <div className="ashade-service-card__content">
-                                            <p>Job description Here</p>
-                                            <div className="align-right">
-                                                <a href="gallery-masonry-4columns.html" className="ashade-learn-more">Read More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    	{/* <!-- .ashade-service-card --> */}
-                                <div className="ashade-service-card">
-									<div className="ashade-service-card__head">
-										<div className="ashade-service-card__image">
-											<img src="img/services/thmb-nature.png" />
-										</div>
-										<div className="ashade-service-card__label">
-											<h4>
-												<span>Photos of wild nature</span>
-												Service Title
-											</h4>
-										</div>
-                                    </div>
-                                    {/* <!-- .ashade-service-card__head --> */}
-									<div className="ashade-service-card__content">
-										<p>Job description Here</p>
-										<div className="align-right">
-											<a href="gallery-masonry-4columns.html" className="ashade-learn-more">Read More</a>
-										</div>
-									</div>
-								</div>
+                                	
                             </div>
                         </div>
                     </div>
