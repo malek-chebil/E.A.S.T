@@ -19,7 +19,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { rootReducer } from "../../Redux/redux";
-// import TermsAndConditions from "./components/termsAndConditions.jsx";
+import TermsAndConditions from "./components/termsAndConditions.jsx";
 
 class App extends React.Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class App extends React.Component {
           <Route path="/PostJob" component={PostJob} />
           <Route path="/JobMarket" component={Market} />
           <Route path="/Contract" component={Contract} />
-          {/* <Route path="/TermsAndConditions" component={TermsAndConditions} /> */}
+          <Route path="/TermsAndConditions" component={TermsAndConditions} />
 
 
         </Router>

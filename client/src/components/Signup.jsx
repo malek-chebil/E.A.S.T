@@ -18,7 +18,7 @@ class Signup extends React.Component {
     this.setState({
       client: false,
       serviceprovider: true,
-      Registration: "Register as a Freelancer",
+      Registration: "Register as Artist",
     });
   }
 
@@ -26,31 +26,35 @@ class Signup extends React.Component {
     this.setState({
       client: true,
       serviceprovider: false,
-      Registration: "Register as a client",
+      Registration: "Register as Client",
     });
   }
-  
+
   render() {
-    return (<div>
-      <div  className="col-md-6 signup-form-1">
-          <h3 id="login-signup-header">{this.state.Registration}</h3>
-        <button
-          className="SwitchConsumer"
-          id="switchbtn1"
-          onClick={this.serviceprovider}
-        >
-          FreeLancer
-        </button>{" "}
-        <button
-          className="SwitchConsumer"
-          id="switchbtn2"
-          onClick={this.client}
-        >
-          Client
-        </button>
-       {this.state.client ? <ClientSignup /> : <FreelancerSignup />}
-      </div>
-      <Footer />
+    return (
+      <div>
+        
+        <div className="col-md-6 signup-form-1">
+        <div className="signUp">
+            <h3 id="login-signup-header">{this.state.Registration}</h3>
+            <button
+              className="SwitchConsumer"
+              id="switchbtn1"
+              onClick={this.serviceprovider}
+            >
+             Artist
+            </button>{" "}
+            <button
+              className="SwitchConsumer"
+              id="switchbtn2"
+              onClick={this.client}
+            >
+              Client
+            </button>
+            {this.state.client ? <ClientSignup /> : <FreelancerSignup />}
+          </div>
+        </div>
+        <Footer />
       </div>
     );
   }
