@@ -2700,7 +2700,8 @@ p.ashade-intro {
   
   @media screen and (max-width: 800px) {
 	.signup-form-1 {
-		background: #282726;
+		background-image: url('https://www.chromethemer.com/google-chrome/backgrounds/download/random-hd-background-for-google-chrome-ct5624.jpg');
+		background-size: cover;
 		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 		border: solid 1px;
 		max-width: 1000px;
@@ -2713,12 +2714,13 @@ p.ashade-intro {
   }
   @media screen and (min-width: 800px) {
 	.signup-form-1 {
-		background: #282726;
+		background-image: url('https://www.chromethemer.com/google-chrome/backgrounds/download/random-hd-background-for-google-chrome-ct5624.jpg');
+		background-size: cover;
 		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 		border: solid 1px;
 		max-width: 1000px;
 		margin: auto;
-		width: 40%;
+		width: 50%;
 		padding: 10px;
 		margin-top: 200px;
 	}
@@ -2803,15 +2805,7 @@ p.ashade-intro {
 }
 
 }
-@media screen and (min-width: 800px) {
-	#TandC {
-		margin: auto;
-		position: relative ;
-		/* margin-left: 280px; */
-		margin-top: 250px;
-		height: 800px;
-		width: 800px;
-	}
+
 @media screen and (max-width: 800px) {
 	.imgpostjob{
 		margin: auto;
@@ -2829,3 +2823,23 @@ p.ashade-intro {
 	  
 	}
   }
+  
+  #checkid{
+	display: inline-block;
+    vertical-align: middle;
+    margin-top: -16px;
+    position: absolute;
+    margin-left: -666px;
+
+}
+#checkid1{
+    margin-left: 20px;
+
+}
+.signUp{
+	/* background-image: url('https://media.istockphoto.com/photos/yellow-paper-background-colorful-paper-texture-picture-id894991010?k=6&m=894991010&s=612x612&w=0&h=0GC473FzZMuJXzMgKEjhBXHv5g41GpUmvmEX4klnm4w='); */
+	/* background-color: #cccccc; Used if the image is unavailable */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+}
