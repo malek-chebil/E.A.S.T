@@ -36,8 +36,7 @@ class App extends React.Component {
  this.setState({user})
      }
      
-    ChangePage(pathname){
-      console.log("pathname",pathname)
+    ChangePage(pathname,data){
      if(pathname==="/"){
       this.setState({page:<Home/>})
     }else if(pathname==="/About"){
@@ -53,9 +52,9 @@ class App extends React.Component {
     }else if(pathname==="/PostJob"){
       this.setState({page:<PostJob/>})
     }else if(pathname==="/Market"){
-      this.setState({page:<Market/>})
+      this.setState({page:<Market ChangePage={this.ChangePage}/>})
     }else if(pathname==="/JobDetails"){
-      this.setState({page:<JobDetails/>})
+      this.setState({page:<JobDetails jobDetails={data}/>})
     }else if(pathname==="/Signup"){
       this.setState({page:<Signup/>})
     }else if(pathname==="/Login"){
