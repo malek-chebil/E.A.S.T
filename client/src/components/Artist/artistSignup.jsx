@@ -1,7 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 import axios from "axios";
-class ClientSignup extends React.Component {
+class ArtistSignup extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -11,16 +10,17 @@ class ClientSignup extends React.Component {
       password: "",
       repass: "",
       age: "",
-      gender: "male",
+      gender: "",
       city: "",
-      Adresse: "",
+      adress: "",
+      field: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(e) {
     e.preventDefault();
-    let clientData = {
+    let ArtistData = {
       FirstName: this.state.firstName,
       LastName: this.state.lastName,
       Email: this.state.Email,
@@ -28,13 +28,14 @@ class ClientSignup extends React.Component {
       Gender: this.state.gender,
       Age: this.state.age,
       City: this.state.city,
-      Adresse: this.state.Adresse,
+      Adresse: this.state.adress,
+      Field: this.state.field,
     };
     if (this.state.password === this.state.repass) {
       axios
-        .post("/api/Clients/Signup", clientData)
+        .post("/api/freeLancers/Signup", ArtistData)
         .then((data) => {
-          console.log(data);
+          console.log(data.data);
         })
         .catch((e) => {
           console.log(e);
@@ -48,11 +49,12 @@ class ClientSignup extends React.Component {
       [name]: e.target.value,
     });
   }
+
   render() {
     return (
       <div>
         <form onSubmit={this.handleClick}>
-          <div onChange={this.handleChange}>
+          <div id="testeststst" onChange={this.handleChange}>
             <div className="form-group">
               <input
                 type="text"
@@ -107,12 +109,13 @@ class ClientSignup extends React.Component {
                 required
               />
             </div>
-            <label htmlFor="Your Gender">Your Gender</label>
+            <label htmlFor="Your Gender">Gender</label>
             <select
               className="select"
-              placeholder="Your Gender"
-              name="gender"
               className="LoginSignupInp"
+              placeholder=" Gender"
+              name="gender"
+              required
             >
               <option value="male">male</option>
               <option value="female">female</option>
@@ -131,23 +134,32 @@ class ClientSignup extends React.Component {
                 type="text"
                 className="form-control"
                 placeholder="Your Adress "
-                name="Adresse"
+                name="adress"
                 required
               />
             </div>
+            <label htmlFor="Your Field">Your Artistic Field</label>
+            <select
+              className="select"
+              className="LoginSignupInp"
+              placeholder="Your Field"
+              name="field"
+              required
+            >
+              <option value="Designer">3D Designer</option>
+              <option value="Designer">Graphic Designer</option>
+              <option value="Photographer">Photographer</option>
+              <option value="Audio Visual">Audio-visual</option>
+            </select>
+
             <input id="checkid" type="checkbox" value="test" />
-            <label id="checkid1">
+            <label  id="checkid1">
               {" "}
-             I have Read and Accept  {" "}  <a href="">  Terms And Conditions</a>
-              
+              I have Read and Accept  {" "}  <a href="">  Terms And Conditions</a>
             </label>
+
             <div className="form-group">
-              <input
-                type="submit"
-                className="btnSubmit"
-                value="Signup"
-                required
-              />{" "}
+              <input type="submit" className="btnSubmit" value="Signup" />{" "}
               <input type="submit" className="btnSubmit" value="Login" />
             </div>
           </div>
@@ -157,4 +169,4 @@ class ClientSignup extends React.Component {
   }
 }
 
-export default ClientSignup;
+export default ArtistSignup;

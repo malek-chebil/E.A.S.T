@@ -6,12 +6,15 @@ class PostJob extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      defaultUrl: "img/services/thmb-nature.png",
+      defaultUrl: "../img/services/thmb-nature.png",
       imgUrl: "",
       jobTitle: "",
       fields: "",
       jobDescription: "",
+      Budget: "",
       user: this.props.user,
+      dateNow: new Date(),
+      eventDate: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,12 +23,16 @@ class PostJob extends React.Component {
     console.log(this.state.user);
     e.preventDefault();
     var jobData = {
-      client_id: this.state.user.client_id,
+      client_id: this.state.user.id,
       jobTitle: this.state.jobTitle,
       fields: this.state.fields,
       imgUrl: this.state.imgUrl,
       jobDescription: this.state.jobDescription,
+      budget: this.state.budget,
+      dateNow: this.state.dateNow,
+      eventDate: this.state.eventDate,
     };
+    let newDate = new Date();
     axios
       .post("/api/clients/postJob", jobData)
       .then((data) => {
@@ -35,6 +42,9 @@ class PostJob extends React.Component {
           fields: "",
           imgUrl: "",
           jobDescription: "",
+          budget: "",
+          date: "",
+          eventDate: newDate,
         });
       })
       .catch((e) => {
@@ -96,9 +106,18 @@ class PostJob extends React.Component {
               />
             </div>
             <div className="ashade-col col-4">
+              <input
+                type="date"
+                id="eventDate"
+                name="eventDate"
+                placeholder="Event Date"
+                required
+              />
+            </div>
+            <div className="ashade-col col-4">
               <select name="fields" id="selectFiled">
                 <option hidden name="choose" value="select Field">
-                  Select your Field
+                  Fields
                 </option>
 
                 <option name="Design" value="Design">
@@ -116,6 +135,15 @@ class PostJob extends React.Component {
                 <option name="Music" value="Music">
                   Music
                 </option>
+                <option name="architecture" value="architecture">
+                  architecture
+                </option>
+                <option name="filmmaking" value="filmmaking">
+                  filmmaking
+                </option>
+                <option name="drawing" value="drawing">
+                  drawing
+                </option>
               </select>
             </div>
             <div className="ashade-col col-4">
@@ -124,6 +152,15 @@ class PostJob extends React.Component {
                 id="ImgAddress"
                 name="imgUrl"
                 placeholder="Image Address"
+                required
+              />
+            </div>
+            <div className="ashade-col col-4">
+              <input
+                type="text"
+                id="ImgAddress"
+                name="Budget"
+                placeholder="Budget"
                 required
               />
             </div>
@@ -149,8 +186,8 @@ class PostJob extends React.Component {
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-    user:state.user
-  }
-}
+    user: state.user,
+  };
+};
 
 export default connect(mapStateToProps)(PostJob);

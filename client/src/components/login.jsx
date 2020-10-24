@@ -8,17 +8,17 @@ class Login extends React.Component {
         this.state={
             Email:"",
             Password:"",
-            serviceprovider:true,
+            Artist:true,
             client:false,
-            Registration:"Login as a service-provider"
+            Registration:"Login as Aritst"
         }
-  this.serviceprovider=this.serviceprovider.bind(this)
+  this.Artist=this.Artist.bind(this)
   this.client=this.client.bind(this)
   this.Login=this.Login.bind(this)
          }
 
          Login() {
-             if(this.state.serviceprovider){
+             if(this.state.Artist){
                 axios({
                     url: '/api/freeLancers/Login',
                     method: 'post',
@@ -32,6 +32,11 @@ class Login extends React.Component {
                         alert("Check Again")
                     }else{
                         this.props.update(data.data.userData)
+                        if(data.data.userData.type=="freelancer"){
+                            this.props.ChangeUser('freelancer')
+                            this.props.ChangePage("/")
+                            window.history.pushState({},null,"/")
+                        }
                     }
     
                 }).catch(err => console.log(err))
@@ -49,26 +54,31 @@ class Login extends React.Component {
                         alert("Check Again")
                     }else{
                         this.props.update(data.data.userData)
-                    }
 
+                        if(data.data.userData.type=="client"){
+                        this.props.ChangeUser('client')
+                        this.props.ChangePage("/")
+                        window.history.pushState({},null,"/")
+                        }
+                    }
                 }).catch(err => console.log(err))
              }
-            
         };
 
-        serviceprovider(){
-         this.setState({client:false,serviceprovider:true,Registration:"Login as a service-provider",Email:"",Password:""})
+        Artist(){
+         this.setState({client:false,Artist:true,Registration:"Login as Artist",Email:"",Password:""})
         }
 
         client(){
-         this.setState({client:true,serviceprovider:false,Registration:"Login as a client",Email:"",Password:""})
+         this.setState({client:true,Artist:false,Registration:"Login as a client",Email:"",Password:""})
         }
     render() {
       return <div>
           <div className="col-md-6 signup-form-1">
+        
         <h3 id="h3login">{this.state.Registration}</h3>
-        <button className="SwitchConsumer" id="switchbtn1" onClick={this.serviceprovider}>Serviceprovider</button> <button className="SwitchConsumer" id="switchbtn2" onClick={this.client}>Client</button>
-        {this.state.serviceprovider?
+        <button className="SwitchConsumer" id="switchbtn1" onClick={this.Artist}>Artist</button> <button className="SwitchConsumer" id="switchbtn2" onClick={this.client}>Client</button>
+        {this.state.Artist?
         <div>
         <div className="form-group">
             <input type="text" className="form-control" placeholder="Your Email " onChange={event=>{this.setState({Email:event.target.value})}}/>
@@ -99,6 +109,9 @@ class Login extends React.Component {
         </div>
         :null}
     </div>
+    <br/>
+    <br/>
+    <br/>
         <Footer/>
       </div>;
     }

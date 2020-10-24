@@ -1,4 +1,6 @@
-CREATE TABLE Clients (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+CREATE DATABASE east;
+
+CREATE TABLE Artists (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
      FirstName VARCHAR(20) ,
      LastName VARCHAR(20),
      Email VARCHAR(50)  ,
@@ -7,6 +9,8 @@ CREATE TABLE Clients (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
      Age int,
      City VARCHAR(20),
      Adresse VARCHAR(40),
+     Field VARCHAR(20),
      imgsrc VARCHAR(200),
      CONSTRAINT EmaiUn UNIQUE (Email)
 );
+
