@@ -109,11 +109,11 @@ class ArtistSignup extends React.Component {
                 required
               />
             </div>
-            <label htmlFor="Your Gender">Your Gender</label>
+            <label htmlFor="Your Gender">Gender</label>
             <select
               className="select"
               className="LoginSignupInp"
-              placeholder="Your Gender"
+              placeholder=" Gender"
               name="gender"
               required
             >
@@ -151,6 +151,13 @@ class ArtistSignup extends React.Component {
               <option value="Photographer">Photographer</option>
               <option value="Audio Visual">Audio-visual</option>
             </select>
+
+            <input id="checkid" type="checkbox" value="test" />
+            <label  id="checkid1">
+              {" "}
+              I have Read and Accept  {" "}  <a href="">  Terms And Conditions</a>
+            </label>
+
             <div className="form-group">
               <input type="submit" className="btnSubmit" value="Signup" />{" "}
               <input type="submit" className="btnSubmit" value="Login" />

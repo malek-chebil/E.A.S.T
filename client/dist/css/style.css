@@ -2711,6 +2711,15 @@ p.ashade-intro {
 		margin-top: 200px;
 		
 	}
+	#checkid{
+		margin-left: -315px;
+		margin-bottom: 30px;
+	}
+	#checkid1 {
+		
+		margin-top: -65px;
+		margin-left: 24px;
+	}
   }
   @media screen and (min-width: 800px) {
 	.signup-form-1 {
@@ -2723,6 +2732,15 @@ p.ashade-intro {
 		width: 50%;
 		padding: 10px;
 		margin-top: 200px;
+	}
+	#checkid{
+		margin-left: -315px;
+		margin-bottom: 30px;
+	}
+	#checkid1 {
+		
+		margin-top: -65px;
+		margin-left: 24px;
 	}
 
   }
@@ -2972,6 +2990,7 @@ p.ashade-intro {
 
 .modal input:focus ~ label {
   transform: scale(0.97);
+
 }
 
 #modal__trigger{

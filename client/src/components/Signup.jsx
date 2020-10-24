@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./footer.jsx";
 import ClientSignup from "../components/client/clientSignup.jsx";
-import artistSignup from "../components/Artist/artistSignup.jsx";
+import ArtistSignup from "../components/Artist/artistSignup.jsx";
 import { connect } from "react-redux";
 class Signup extends React.Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class Signup extends React.Component {
         >
           Client
         </button>
-       {this.state.client ? <ClientSignup /> : <artistSignup />}
+       {this.state.client ? <ClientSignup /> : <ArtistSignup />}
       </div>
       <Footer />
      

@@ -5,5 +5,7 @@ CREATE TABLE Jobs (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
      imgUrl VARCHAR(200),
      jobDescription VARCHAR(1000),
      budget int,
+     dateNow DATE,
+     eventDate DATE,
      CONSTRAINT Idun UNIQUE (id)
 );
