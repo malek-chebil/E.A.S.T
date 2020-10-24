@@ -2675,7 +2675,7 @@ p.ashade-intro {
 /* *Post Job* */
 .PostJobForm{
 	position: relative;
-	top: 31px;
+	top: 81px;
 	margin: auto;
     width: 62%;
     padding: 10px;
@@ -2698,7 +2698,7 @@ p.ashade-intro {
 }
 /* --- Signup --- */
   
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 	.signup-form-1 {
 		background-image: url('https://www.chromethemer.com/google-chrome/backgrounds/download/random-hd-background-for-google-chrome-ct5624.jpg');
 		background-size: cover;
@@ -2726,7 +2726,6 @@ p.ashade-intro {
 	}
 
   }
-
 
 #btn {
 	position: relative;
@@ -2786,25 +2785,6 @@ p.ashade-intro {
 #login-signup-header{
 	text-align: center;
 }
-@media screen and (min-width: 800px) {
-#contract {
-	margin: auto;
-	position: relative ;
-	text-align: center;
-	margin-top: 400px;
-
-}
-}
-@media screen and (min-width: 800px) {
-#contractImg {
-	margin: auto;
-	position: relative ;
-	margin-left: 280px;
-	height: 800px;
-	width: 800px;
-}
-
-}
 
 @media screen and (max-width: 800px) {
 	.imgpostjob{
@@ -2823,23 +2803,240 @@ p.ashade-intro {
 	  
 	}
   }
-  
-  #checkid{
-	display: inline-block;
-    vertical-align: middle;
-    margin-top: -16px;
+/* //////Job Detail component //// */
+  #DetailJobdescription{
+	  position: relative;
+	  top: 120px;
+	margin: auto;
+	width: 80%;
+	padding: 10px;
+  }
+  #DetailJobTitle{
+	position: relative;
+	top: 100px;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  }
+  #detailsubmitbtn{
+	position: relative;
+	top: 100px;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  }
+  #detailjobimg{
+	position: relative;
+	top: 85px;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  }
+#detailtextarea{
+	width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #FFD300;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+#detailcite{
+		position: relative;
+		margin: auto;
+		top: 100px;
+		left: 150px;
+	}
+	#detailblock{
+		position: relative;
+		width: 100%;
+	}
+	@media screen and (min-width: 1400px) {
+		#detailcite{
+			position: relative;
+			margin: auto;
+			top: 100px;
+			left: 200px;
+		}
+	  }
+	  @media screen and (max-width: 600px) {
+		#detailcite{
+			position: relative;
+			margin: auto;
+			top: 100px;
+			left: 70px;
+		}
+	  }
+  /* //////Modal/// */
+
+
+  @import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+
+/*==================================== 
+  Our Modal Window styles
+=====================================*/
+
+.modal {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  padding: 1em;
+}
+
+@media (min-width: 43.75em) {
+  .modal {
+    padding: 1.5em;
+  }
+}
+#modalbutton{
+	background: #808080;
+	width: 50%;
+}
+.modal > label {
+  background: #FFD300;
+  border: 1px solid #f0c600;
+  border-radius: .2em;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.75em 1.5em;
+  text-shadow: 1px 1px 1px #fff;
+  transition: all 0.55s;
+}
+
+.modal > label:hover {
+  transform: scale(0.97);
+}
+
+.modal__overlay {
+  background: #000000;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+.modal__wrap {
+  padding: 1em 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+}
+
+@media (min-width: 50em) {
+  .modal__wrap {
+    padding: 1.75em;
+  }
+}
+
+@media (min-height: 37.5em) {
+  .modal__wrap {
+    left: 50%;
     position: absolute;
-    margin-left: -666px;
+    top: 50%;
+    transform: translate(-50%, -80%);
+  }
+}
 
+.modal__wrap label {
+  background: #FFD300;
+  border-radius: 50%;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  height: 1.5em;
+  line-height: 1.5;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  width: 1.5em;
 }
-#checkid1{
-    margin-left: 20px;
 
+.modal__wrap h2 {
+  color: #FFD300;
+  margin-bottom: 1em;
+  text-transform: uppercase;
 }
-.signUp{
-	/* background-image: url('https://media.istockphoto.com/photos/yellow-paper-background-colorful-paper-texture-picture-id894991010?k=6&m=894991010&s=612x612&w=0&h=0GC473FzZMuJXzMgKEjhBXHv5g41GpUmvmEX4klnm4w='); */
-	/* background-color: #cccccc; Used if the image is unavailable */
-	background-position: center; /* Center the image */
-	background-repeat: no-repeat; /* Do not repeat the image */
-	background-size: cover; /* Resize the background image to cover the entire container */
+
+.modal__wrap p {
+  color: #FFD300;
+  text-align: justify;
 }
+
+.modal input:focus ~ label {
+  transform: scale(0.97);
+}
+
+#modal__trigger{
+  position: absolute;
+  top: -1000px;
+}
+
+.modal__overlay {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+}
+
+input:checked ~ .modal__overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+#test0{
+	position: relative;
+	top: 300px;
+	left: 300px;
+}
+/* /////Aside Bar /// */
+#AsideBar{
+	margin: 0%;
+	padding: 10%;
+	text-align: center;
+	position: relative;
+	top: 100px;
+	height: 100px;
+	font-size: 50px;
+}
+@media screen and (max-width: 600px) {
+	#AsideBar{
+		margin: 0%;
+		padding: 0%;
+		text-align: center;
+		position: relative;
+		top: 130px;
+		height: 100px;
+	}
+  }
+  .AsideBarAppliedJobs{
+	  font-size:25px;
+  }
+
+#fixmarketimg{
+	width: 155px;
+	height:155px;
+}
+
+#budgetP{
+	font-size: 50px;
+}
+#imgdet{
+	height: 155px;
+}
+.blacktext{
+	color:black
+}
+/* /////BackGrounds//// */
+#homeBackGround{
+background: url(https://w.wallhaven.cc/full/5w/wallhaven-5w1ev8.jpg);
+background-size: cover;
+}
+/* //////////////// */

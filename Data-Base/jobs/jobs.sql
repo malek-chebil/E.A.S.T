@@ -3,5 +3,7 @@ CREATE TABLE Jobs (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
      jobTitle VARCHAR(20) ,
      fields VARCHAR(50)  ,
      imgUrl VARCHAR(200),
-     jobDescription VARCHAR(1000)
+     jobDescription VARCHAR(1000),
+     budget int,
+     CONSTRAINT Idun UNIQUE (id)
 );

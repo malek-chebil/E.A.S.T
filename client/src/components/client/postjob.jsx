@@ -1,3 +1,4 @@
+  
 import React from "react";
 import Footer from "../footer.jsx";
 import axios from "axios";
@@ -6,11 +7,12 @@ class PostJob extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      defaultUrl: "img/services/thmb-nature.png",
+      defaultUrl: "../img/services/thmb-nature.png",
       imgUrl: "",
       jobTitle: "",
       fields: "",
       jobDescription: "",
+      Budget: "",
       user: this.props.user,
     };
     this.handleChange = this.handleChange.bind(this);
@@ -20,11 +22,12 @@ class PostJob extends React.Component {
     console.log(this.state.user);
     e.preventDefault();
     var jobData = {
-      client_id: this.state.user.client_id,
+      client_id: this.state.user.id,
       jobTitle: this.state.jobTitle,
       fields: this.state.fields,
       imgUrl: this.state.imgUrl,
       jobDescription: this.state.jobDescription,
+      budget: this.state.budget,
     };
     axios
       .post("/api/clients/postJob", jobData)
@@ -35,6 +38,7 @@ class PostJob extends React.Component {
           fields: "",
           imgUrl: "",
           jobDescription: "",
+          budget: ""
         });
       })
       .catch((e) => {
@@ -124,6 +128,15 @@ class PostJob extends React.Component {
                 id="ImgAddress"
                 name="imgUrl"
                 placeholder="Image Address"
+                required
+              />
+            </div>
+            <div className="ashade-col col-4">
+              <input
+                type="text"
+                id="ImgAddress"
+                name="Budget"
+                placeholder="Budget"
                 required
               />
             </div>
