@@ -146,7 +146,7 @@ body.has-spotlight:before {
     margin: 0 -20px;
 }
 .ashade-row.ashade-no-gap {
-	margin: 0;
+	margin: 3;
 }
 .ashade-row.ashade-small-gap {
 	margin: 0 -10px;
@@ -3071,7 +3071,7 @@ background-size: cover;
         margin-top: 200px;
 	}
 	#btnsub{
-		position: relative;
+		position: fixed;
     left: 220px;
 	}
   }
@@ -3080,3 +3080,88 @@ background-size: cover;
     left: 80px;
     margin-left: 4px;
   }
+
+
+
+  #profileimg{
+	position: relative;
+	top: -175px;
+	border: #000 solid 1px;
+}
+
+#applierslist{
+	font-size: 8px;
+	display: flex;
+	flex-direction: column;
+	border: #f8f8f8 solid;
+}
+
+.listitem{
+	margin: 5px;
+	border: #f8f8f8 solid;
+}
+.hirebutton{
+	font-size: 14px;
+    padding: 8px;
+	float:right;
+	border-radius: 30px;
+    color: black;
+	background: yellow;
+}
+
+#ApplierEmail{
+	float: left;
+	font-size:20px;
+	color:white;
+}
+
+#editprofilecontent{
+margin-top: 205px;
+}
+
+#imgedit{
+	border-radius: 200px;
+    border: white solid;
+    height: 200px;
+    width: 200px;
+    margin: 0%;
+	padding: 0%;
+	margin: auto;
+    padding: 10px;
+}
+#imputsforedit{
+	display: grid;
+    grid-template-columns: auto auto ;
+    width: 450px;
+}
+
+
+/* //loginAdmin// */
+@media screen and (min-width: 800px) {
+#btnn{
+	position: relative;
+	top: -53px;
+    left: 12px;
+    
+    background-color: #dc3545;
+    border-color: #dc3545;
+
+}
+#formes{
+	border : 2px solid;
+	color: rgb(0, 0, 0);
+  
+}
+#textAr{
+	color: rgb(0, 0, 0);
+	background-color: rgb(0, 0, 0);
+}
+
+#email {
+	color : black;
+}
+#shape{
+	position: relative;
+    top: 120px;
+}
+}

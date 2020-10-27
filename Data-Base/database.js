@@ -12,6 +12,14 @@ connection.connect(function(err) {
           console.log("Connected!");
   });
 
+  const banaccount=async function(Email,reason,date,res){
+    var ban={Banned:true,reason:reason,date:date}
+    await Users.update({Email:Email},{AccountStatus:ban}).then(data=>{
+      console.log(data)
+      res.send()
+    })
+  }
 module.exports={
-  connection
+  connection,
+  banaccount
 }

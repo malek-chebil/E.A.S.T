@@ -15,7 +15,7 @@ import ProfileSP from "./components/serviceprovider/serviceProviderprofil/servic
 import ClientProfile from "./components/client/clientprofile/clientprofil.jsx"
 import JobDetails from "./components/jobdetails.jsx"
 import Admin from "./components/admin/admin.jsx"
-
+import AdminLogin from "./components/admin/AdminLogin.jsx"
 
               ////Redux///
 import {Provider} from "react-redux"
@@ -61,8 +61,11 @@ class App extends React.Component {
     }else if(pathname==="/Login"){
       this.setState({page:<Login ChangeUser={this.ChangeUser} ChangePage={this.ChangePage}/>})
     }else if(pathname==="/Admin"){
-      this.setState({page:<Admin ChangeUser={this.ChangeUser} ChangePage={this.ChangePage}/>})
+      this.setState({page:<Admin/>})
+    }else if(pathname==="/AdminLogin"){
+      this.setState({page:<AdminLogin ChangePage={this.ChangePage} />})
     }
+   
    
     }
 

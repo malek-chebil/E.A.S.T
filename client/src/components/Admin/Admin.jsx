@@ -7,7 +7,7 @@ class Admin extends React.Component {
         this.state = {
            Email : "",
            reason: "",
-           data: "" 
+           date: "" 
         }
         this.AxiosBann = this.AxiosBann.bind(this)
     }
@@ -26,89 +26,141 @@ class Admin extends React.Component {
 
     render() {
       return <div>
-        <div className="ashade-page-title-wrap">
-        <h1 className="ashade-page-title">
-            <span>If You Have More Questions</span>
-            Admin Space
-        </h1>
-    </div>
 
-    <main className="ashade-content-wrap">
-		<div className="ashade-content-scroll">
-			<div className="ashade-content">
-				<section className="ashade-section">
-					<div className="ashade-row">
-                        <div className="ashade-col col-12">
-                            <h1 className="ashade-intro"  >Admin Space</h1>
-						</div>
-					</div>
-				</section>
-				<section className="ashade-section">
-					<div className="ashade-row">
-						<div className="ashade-col col-4">
-							<div className="ashade-contact-details">
-								<h4 className="ashade-contact-details__title">
-									<span>Admin Space</span>
-									Ban Account
-								</h4>
-								
-							</div>
-						</div>
-						<div className="ashade-col col-8">
-							<form action="mail.php" method="post" className="ashade-contact-form">
-								<div className="ashade-row ashade-small-gap">
-                                    <div className="ashade-col col-4">
-										<input type="email" id="email" name="email" placeholder="Account Email" onChange={(e) => {
-                  this.setState({ Email: e.target.value }) }} required/>
-									</div>
-									<div className="ashade-col col-4">
-										<input type="date" id="name" name="name" placeholder="Period"  onChange={(e) => {
-                  this.setState({ date: e.target.value });
-                }} required/>
-									</div>
-									
-									 {/* <div className="ashade-col col-4">
-										<input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
-									</div> */}
-								</div>
-								<textarea name="message" id="message" placeholder="Reason of Ban"  onChange={(e) => {
-                  this.setState({ reason: e.target.value });
-                }} required></textarea>
-								<div className="ashade-contact-form__footer">
-									<div className="ashade-contact-form__response"></div>
-									<div className="ashade-contact-form__submit">
-										<input type="submit" value="Ban Account" onClick={this.AxiosBann}/>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</section>
-			</div>
-			
-			
-		</div>
-	</main>
-    
-    <div className="ashade-to-top-wrap ashade-back-wrap">
-        <div className="ashade-back is-to-top">
-            <span>Back to</span>
-            <span>Top</span>
+        <div>
+        
+      <div className="modal-dialog modal-side modal-bottom-right modal-notify modal-danger" id="shape" role="document">
+      
+        <div className="modal-content">
+        
+          <div className="modal-header">
+            <p className="heading">
+              <strong>Admin Space</strong>
+            </p>
+
+           
+          </div>
+
+         
+          <div className="modal-body">
+
+            <div className="row">
+              <div className="col-3">
+                <p></p>
+                <p className="text-center">
+                  <i className="fas fa-gift fa-4x"></i>
+                </p>
+              </div>
+
+              <div className="col-9">
+                <p>Sharing is caring. Therefore, from time to time we like to give our visitors small gifts. Today is
+                  one of those days.</p>
+                <p>
+                  <strong>Copy the following code and use it at the checkout. It's valid for
+                    <u>one day</u>.</strong>
+                </p>
+                <h2>
+                  <span className="badge">v52gs1</span>
+                </h2>
+
+              </div>
+            </div>
+          </div>
+
+          
+          <div className="modal-footer flex-center">
+            
+          <button  type="button" id = "btnn1"className="btn btn-primary" data-toggle="modal" data-target="#modalPoll-1">Delete Post</button>
+          </div>
+          <div>
+          <button  type="button" id = "btnn"className="btn btn-primary" data-toggle="modal" data-target="#modalPoll-1" >Ban Account</button>
+          </div>
         </div>
+      </div>
+    
+     
+
+        </div>
+
+
+
+<div className="modal fade right" id="modalPoll-1" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true" data-backdrop="false">
+  <div className="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+    <div className="modal-content">
+      
+      <div className="modal-header">
+        <p className="heading lead">Admin Space
+        </p>
+
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" className="white-text">×</span>
+        </button>
+      </div>
+
+    
+      <div className="modal-body">
+        <div className="text-center">
+          <i className="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
+          <p>
+            <strong>Manage Accounts</strong>
+          </p>
+         
+        </div>
+
+        
+
+        
+        
+        <div className="form-check mb-4" id="formes">
+        
+          <input className="email" name="group1" type="email" id="email" placeholder = "Email"  onChange={(e) => {
+                  this.setState({ Email: e.target.value });
+                }} />
+          
+        </div>
+
+        <div className="form-check mb-4" id="formes">
+        
+          <input className="date" name="group1" type="date" id="date" placeholder = "Date"  onChange={(e) => {
+                  this.setState({ date: e.target.value });
+                }}/>
+          
+        </div>
+
+       
+
+        
+       
+
+        <p className="text-center">
+          <strong>Reason of Ban</strong>
+        </p>
+       
+        <div className="md-form" id="formes">
+          <textarea id = "textAr" type="text" id="form79textarea" className="md-textarea form-control" rows="3" onChange={(e) => {
+                  this.setState({ reason: e.target.value });
+                }}></textarea>
+         
+        </div>
+
+      </div>
+
+      
+      <div className="modal-footer justify-content-center">
+        <a type="button" className="btn btn-primary waves-effect waves-light" onClick={this.AxiosBann}>Send
+          <i className="fa fa-paper-plane ml-1"></i> 
+        </a>
+        <a type="button" className="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
+      </div>
     </div>
+  </div>
+</div>
 
    
 
    
-    <div className="ashade-menu-overlay"></div>
-    <div className="ashade-aside-overlay"></div>
-    <div className="ashade-cursor is-inactive">
-    	<span className="ashade-cursor-circle"></span>
-    	<span className="ashade-cursor-slider"></span>
-    	<span className="ashade-cursor-close ashade-cursor-label">Close</span>
-    	<span className="ashade-cursor-zoom ashade-cursor-label">Zoom</span>
-    </div>
-	
+    
       </div>
     }
   }
